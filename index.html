@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sílaba D Completa - Casa Bilíngue Kids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f7ff; color: #333; scroll-behavior: smooth; }
+        .kids-font { font-family: 'Fredoka', sans-serif; }
+        .card-word { background: white; border-radius: 24px; border: 4px solid #e0e7ff; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .card-word:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .syllable-btn { background: #f3f0ff; border: 2px solid #ddd6fe; color: #6d28d9; padding: 6px 12px; border-radius: 12px; font-weight: 700; font-size: 1.2rem; transition: all 0.2s; cursor: pointer; }
+        .syllable-btn:hover { background: #9b59b6; color: white; transform: scale(1.1); }
+        .btn-audio { background: #2ecc71; color: white; padding: 5px 12px; border-radius: 50px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 5px; cursor: pointer; border: none; }
+        .transcription { color: #e67e22; font-style: italic; font-size: 0.85rem; font-weight: 500; }
+        .translation-text { color: #555; font-size: 0.8rem; font-weight: 500; display: block; margin-top: -2px; }
+        .nav-dot { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; font-weight: bold; text-decoration: none; transition: transform 0.2s; }
+        .nav-dot:hover { transform: scale(1.2); }
+        .header-sticky { position: sticky; top: 0; z-index: 50; background: rgba(240, 247, 255, 0.9); backdrop-filter: blur(5px); padding-bottom: 10px; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <h1 class="kids-font text-4xl text-purple-600">CASA BILÍNGUE KIDS</h1>
+            <p class="text-orange-500 font-semibold italic text-sm">O jeito mais natural de Criar um pequeno bilíngue</p>
+            <div class="inline-block bg-yellow-400 px-6 py-1 rounded-full mt-2 shadow-md">
+                <span class="kids-font text-lg text-white">Módulo Sílaba Bilíngue - Letra D</span>
+            </div>
+            <p class="text-gray-400 text-xs mt-1">Autor: Fábio de Almeida</p>
+        </header>
+
+        <!-- Menu de Navegação Rápida -->
+        <div class="header-sticky">
+            <nav class="flex justify-center gap-3 py-4 flex-wrap">
+                <a href="#sec-da" class="nav-dot bg-red-400">DA</a>
+                <a href="#sec-de" class="nav-dot bg-blue-400">DE</a>
+                <a href="#sec-di" class="nav-dot bg-green-400">DI</a>
+                <a href="#sec-do" class="nav-dot bg-orange-400">DO</a>
+                <a href="#sec-du" class="nav-dot bg-purple-400">DU</a>
+                <a href="#sec-dao" class="nav-dot bg-yellow-600">DÃO</a>
+            </nav>
+            <div class="text-center text-[10px] text-gray-500 uppercase tracking-widest">Toque nas sílabas para ouvir o som</div>
+        </div>
+
+        <!-- SEÇÕES -->
+        <div id="content-area">
+            <section id="sec-da" class="mb-20">
+                <h2 class="kids-font text-3xl text-red-500 border-b-4 border-red-200 mb-8 pb-2">Lição 13: Família do DA</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-da"></div>
+            </section>
+
+            <section id="sec-de" class="mb-20">
+                <h2 class="kids-font text-3xl text-blue-500 border-b-4 border-blue-200 mb-8 pb-2">Lição 14: Família do DE</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-de"></div>
+            </section>
+
+            <section id="sec-di" class="mb-20">
+                <h2 class="kids-font text-3xl text-green-500 border-b-4 border-green-200 mb-8 pb-2">Lição 15: Família do DI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-di"></div>
+            </section>
+
+            <section id="sec-do" class="mb-20">
+                <h2 class="kids-font text-3xl text-orange-500 border-b-4 border-orange-200 mb-8 pb-2">Lição 16: Família do DO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-do"></div>
+            </section>
+
+            <section id="sec-du" class="mb-20">
+                <h2 class="kids-font text-3xl text-purple-500 border-b-4 border-purple-200 mb-8 pb-2">Lição 17: Família do DU</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-du"></div>
+            </section>
+
+            <section id="sec-dao" class="mb-20">
+                <h2 class="kids-font text-3xl text-yellow-700 border-b-4 border-yellow-200 mb-8 pb-2">Lição 18: O Som do DÃO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-dao"></div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            da: [
+                { pt: "DA-DO", en: "Dice", tr: "(DÁISS)", emoji: "🎲", s1: "I roll the dice.", t1: "Eu jogo o dado.", st1: "(/ai rôul dâ dáiss/)", s2: "Roll the dice for the game.", t2: "Jogue o dado para o jogo.", st2: "(/rôul dâ dáiss fôr dâ guêim/)" },
+                { pt: "DA-MA", en: "Lady", tr: "(LÊI-DI)", emoji: "👸", s1: "The lady is kind.", t1: "A dama é gentil.", st1: "(/dâ lêi-di iz káind/)", s2: "She is a beautiful lady.", t2: "Ela é uma bela dama.", st2: "(/shi iz ê biú-ti-ful lêi-di/)" },
+                { pt: "DÁL-MA-TA", en: "Dalmatian", tr: "(DÂL-MÊI-SHÂN)", emoji: "🐶", s1: "The dalmatian has black spots.", t1: "O dálmata tem manchas pretas.", st1: "(/dâ dâl-mêi-shân héz blék spóts/)", s2: "A cute dalmatian puppy.", t2: "Um filhote de dálmata fofo.", st2: "(/ê kiút dâl-mêi-shân pâ-pi/)" },
+                { pt: "DAN-ÇA", en: "Dance", tr: "(DÉNS)", emoji: "💃", s1: "I like to dance.", t1: "Eu gosto de dançar.", st1: "(/ai láik tu déns/)", s2: "Let's dance together.", t2: "Vamos dançar juntos.", st2: "(/léts déns tu-guê-dêr/)" },
+                { pt: "DAR-DO", en: "Dart", tr: "(DÁRT)", emoji: "🎯", s1: "Throw the dart at the board.", t1: "Jogue o dardo no alvo.", st1: "(/thrôu dâ dárt ét dâ bôrd/)", s2: "The dart hit the center.", t2: "O dardo acertou o centro.", st2: "(/dâ dárt hít dâ sén-têr/)" },
+                { pt: "DA-MAS-CO", en: "Apricot", tr: "(ÊI-PRI-KÓT)", emoji: "🍑", s1: "The apricot is sweet.", t1: "O damasco é doce.", st1: "(/dâ êi-pri-kót iz suít/)", s2: "I like dried apricots.", t2: "Eu gosto de damascos secos.", st2: "(/ai láik dráid êi-pri-kóts/)" },
+                { pt: "DA-TA", en: "Date", tr: "(DÊIT)", emoji: "📅", s1: "What is the date today?", t1: "Qual é a data hoje?", st1: "(/uót iz dâ dêit tu-dêi/)", s2: "Write the date in your book.", t2: "Escreva a data no seu livro.", st2: "(/ráit dâ dêit in iór bu-k/)" },
+                { pt: "DA-MAS", en: "Checkers", tr: "(TCHÉ-KÊRS)", emoji: "🏁", s1: "Let's play checkers.", t1: "Vamos jogar damas.", st1: "(/léts plêi tchê-kêrs/)", s2: "I won at checkers!", t2: "Eu ganhei no jogo de damas!", st2: "(/ai uón ét tchê-kêrs/)" },
+                { pt: "DAR", en: "Give", tr: "(GUÍV)", emoji: "🤲", s1: "Give me a hug.", t1: "Dê-me um abraço.", st1: "(/guív mi ê hâng/)", s2: "Give the toy to your friend.", t2: "Dê o brinquedo para o seu amigo.", st2: "(/guív dâ tói tu iór frénd/)" },
+                { pt: "DAN-ÇA-RI-NA", en: "Dancer", tr: "(DÉN-SÊR)", emoji: "👯‍♀️", s1: "The dancer is graceful.", t1: "A dançarina é graciosa.", st1: "(/dâ dén-sêr iz grêis-ful/)", s2: "I want to be a dancer.", t2: "Eu quero ser uma dançarina.", st2: "(/ai uónt tu bi ê dén-sêr/)" },
+                { pt: "DÁ-LIA", en: "Dahlia", tr: "(DÁ-LI-Â)", emoji: "🌸", s1: "The dahlia is a pretty flower.", t1: "A dália é uma flor bonita.", st1: "(/dâ dá-li-â iz ê prí-ti fláu-êr/)", s2: "A pink dahlia in the garden.", t2: "Uma dália rosa no jardim.", st2: "(/ê pínk dá-li-â in dâ gár-dên/)" },
+                { pt: "DA-NO-NE", en: "Yogurt", tr: "(IÔ-GURT)", emoji: "🥣", s1: "I like strawberry yogurt.", t1: "Eu gosto de iogurte (danone) de morango.", st1: "(/ai láik stró-bê-ri iô-gurt/)", s2: "The yogurt is in the fridge.", t2: "O danone está na geladeira.", st2: "(/dâ iô-gurt iz in dâ frídj/)" }
+            ],
+            de: [
+                { pt: "DE-DO", en: "Finger", tr: "(FÍN-GUÊR)", emoji: "☝️", s1: "Point with your finger.", t1: "Aponte com seu dedo.", st1: "(/póint uíd iór fín-guêr/)", s2: "I have five fingers.", t2: "Eu tenho cinco dedos.", st2: "(/ai hév fáiv fín-guêrs/)" },
+                { pt: "DEN-TE", en: "Tooth", tr: "(TÚTH)", emoji: "🦷", s1: "Brush your teeth.", t1: "Escove seus dentes.", st1: "(/brâsh iór tith/)", s2: "I lost a tooth.", t2: "Eu perdi um dente.", st2: "(/ai lóst ê túth/)" },
+                { pt: "DEZ", en: "Ten", tr: "(TÉN)", emoji: "🔟", s1: "I have ten toys.", t1: "Eu tenho dez brinquedos.", st1: "(/ai hév tén tóis/)", s2: "Count to ten.", t2: "Conte até dez.", st2: "(/káunt tu tén/)" },
+                { pt: "DE-DAL", en: "Thimble", tr: "(THÍM-BÔL)", emoji: "🧵", s1: "A thimble protects your finger.", t1: "O dedal protege o seu dedo.", st1: "(/ê thím-bôl prô-tékts iór fín-guêr/)", s2: "Mom uses a thimble.", t2: "Mamãe usa um dedal.", st2: "(/môm iú-zêz ê thím-bôl/)" },
+                { pt: "DE-GRAU", en: "Step", tr: "(STÉP)", emoji: "🪜", s1: "Watch the step!", t1: "Cuidado com o degrau!", st1: "(/uótch dâ stép/)", s2: "Go up one step.", t2: "Suba um degrau.", st2: "(/gou âp uán stép/)" },
+                { pt: "DE-SER-TO", en: "Desert", tr: "(DÊ-ZÊRT)", emoji: "🏜️", s1: "The desert is very hot.", t1: "O deserto é muito quente.", st1: "(/dâ dê-zêrt iz vé-ri hót/)", s2: "Camels live in the desert.", t2: "Camelos vivem no deserto.", st2: "(/kâ-mêls lív in dâ dê-zêrt/)" },
+                { pt: "DE-SE-NHO", en: "Drawing", tr: "(DRÓ-ÍN)", emoji: "🎨", s1: "Look at my drawing.", t1: "Olhe para o meu desenho.", st1: "(/luk ét mai dró-ín/)", s2: "I like to draw.", t2: "Eu gosto de desenhar.", st2: "(/ai láik tu dró/)" },
+                { pt: "DE-TE-TI-VE", en: "Detective", tr: "(DI-TÉK-TIV)", emoji: "🕵️", s1: "The detective solves mysteries.", t1: "O detetive resolve mistérios.", st1: "(/dâ di-ték-tiv sólvs mís-tê-ris/)", s2: "I am a detective.", t2: "Eu sou um detetive.", st2: "(/ai ém ê di-ték-tiv/)" },
+                { pt: "DEI-TAR", en: "Lie down", tr: "(LÁI DÁUN)", emoji: "🛌", s1: "Lie down and rest.", t1: "Deite-se e descanse.", st1: "(/lái dáun énd rést/)", s2: "I will lie down now.", t2: "Eu vou me deitar agora.", st2: "(/ai uíl lái dáun náu/)" },
+                { pt: "DEN-TE-DE-LE-ÃO", en: "Dandelion", tr: "(DÉN-DI-LÁI-ÔN)", emoji: "🌻", s1: "Blow the dandelion.", t1: "Sopre o dente-de-leão.", st1: "(/blôu dâ dén-di-lái-ôn/)", s2: "A yellow dandelion flower.", t2: "Uma flor de dente-de-leão amarela.", st2: "(/ê ié-lou dén-di-lái-ôn fláu-êr/)" },
+                { pt: "DEN-TIS-TA", en: "Dentist", tr: "(DÉN-TIST)", emoji: "👨‍⚕️", s1: "The dentist checks my teeth.", t1: "O dentista checa meus dentes.", st1: "(/dâ dén-tist tchêks mai tith/)", s2: "I am not afraid of the dentist.", t2: "Eu não tenho medo do dentista.", st2: "(/ai ém nót ê-frêid ôv dâ dén-tist/)" },
+                { pt: "DES-PER-TA-DOR", en: "Alarm clock", tr: "(Â-LÁRM KLÓK)", emoji: "⏰", s1: "The alarm clock is loud.", t1: "O despertador é barulhento.", st1: "(/dâ â-lárm klók iz láud/)", s2: "Set the alarm clock.", t2: "Ajuste o despertador.", st2: "(/sét dâ â-lárm klók/)" }
+            ],
+            di: [
+                { pt: "DI-A", en: "Day", tr: "(DÊI)", emoji: "☀️", s1: "It is a sunny day.", t1: "Está um dia ensolarado.", st1: "(/it iz ê sâ-ni dêi/)", s2: "Have a nice day!", t2: "Tenha um bom dia!", st2: "(/hév ê náiss dêi/)" },
+                { pt: "DI-A-MAN-TE", en: "Diamond", tr: "(DÁI-Â-MÔND)", emoji: "💎", s1: "The diamond is shiny.", t1: "O diamante é brilhante.", st1: "(/dâ dái-â-mônd iz shái-ni/)", s2: "A hard diamond ring.", t2: "Um anel de diamante duro.", st2: "(/ê hárd dái-â-mônd rín/)" },
+                { pt: "DI-NHEI-RO", en: "Money", tr: "(MÂ-NI)", emoji: "💰", s1: "Save your money.", t1: "Guarde seu dinheiro.", st1: "(/sêiv iór mâ-ni/)", s2: "I need some money.", t2: "Eu preciso de um pouco de dinheiro.", st2: "(/ai níd sâm mâ-ni/)" },
+                { pt: "DI-NOS-SAU-RO", en: "Dinosaur", tr: "(DÁI-NÔ-SÓR)", emoji: "🦕", s1: "The dinosaur is huge.", t1: "O dinossauro é enorme.", st1: "(/dâ dái-nô-sór iz hiú-dj/)", s2: "I like dinosaurs.", t2: "Eu gosto de dinossauros.", st2: "(/ai láik dái-nô-sórs/)" },
+                { pt: "DIS-CO", en: "Disk", tr: "(DÍSK)", emoji: "💿", s1: "The computer has a disk.", t1: "O computador tem um disco.", st1: "(/dâ kôm-piú-têr héz ê dísk/)", s2: "Put the disk inside.", t2: "Coloque o disco dentro.", st2: "(/put dâ dísk in-sáid/)" },
+                { pt: "DI-Á-RIO", en: "Diary", tr: "(DÁI-Â-RI)", emoji: "📔", s1: "I write in my diary.", t1: "Eu escrevo no meu diário.", st1: "(/ai ráit in mai dái-â-ri/)", s2: "My secret diary.", t2: "Meu diário secreto.", st2: "(/mai sí-krit dái-â-ri/)" },
+                { pt: "DI-PLO-MA", en: "Diploma", tr: "(DI-PLÔ-MÂ)", emoji: "📜", s1: "She got a diploma.", t1: "Ela recebeu um diploma.", st1: "(/shi gót ê di-plô-mâ/)", s2: "Frame your diploma.", t2: "Emoldure seu diploma.", st2: "(/frêim iór di-plô-mâ/)" },
+                { pt: "DI-CA", en: "Tip", tr: "(TÍP)", emoji: "💡", s1: "Give me a tip.", t1: "Dê-me uma dica.", st1: "(/guív mi ê típ/)", s2: "Thanks for the tip.", t2: "Obrigado pela dica.", st2: "(/thénks fôr dâ típ/)" },
+                { pt: "DI-REI-TA", en: "Right", tr: "(RÁIT)", emoji: "➡️", s1: "Turn to the right.", t1: "Vire à direita.", st1: "(/tûrn tu dâ ráit/)", s2: "Your right hand.", t2: "Sua mão direita.", st2: "(/iór ráit hénd/)" },
+                { pt: "DI-VI-SÃO", en: "Division", tr: "(DI-VÍ-JHÂN)", emoji: "➗", s1: "Learn division in school.", t1: "Aprenda divisão na escola.", st1: "(/lûrn di-ví-jhân in skúl/)", s2: "The division is easy.", t2: "A divisão é fácil.", st2: "(/dâ di-ví-jhân iz í-zi/)" },
+                { pt: "DI-RE-TOR", en: "Director", tr: "(DI-RÉK-TÔR)", emoji: "🎬", s1: "The movie director is here.", t1: "O diretor do filme está aqui.", st1: "(/dâ mú-vi di-rék-tôr iz hír/)", s2: "Talk to the director.", t2: "Fale com o diretor.", st2: "(/tók tu dâ di-rék-tôr/)" },
+                { pt: "DÊ-VÊ-DÊ", en: "DVD", tr: "(DI-VI-DI)", emoji: "📀", s1: "Watch a movie on DVD.", t1: "Assista a um filme no DVD.", st1: "(/uótch ê mú-vi on di-vi-di/)", s2: "The DVD is round.", t2: "O DVD é redondo.", st2: "(/dâ di-vi-di iz ráund/)" }
+            ],
+            do: [
+                { pt: "DO-CE", en: "Candy", tr: "(KÉN-DI)", emoji: "🍬", s1: "I love sweet candy.", t1: "Eu amo doce.", st1: "(/ai lâv suít kén-di/)", s2: "Too much candy is bad.", t2: "Muito doce faz mal.", st2: "(/tu mâtch kén-di iz béd/)" },
+                { pt: "DOIS", en: "Two", tr: "(TÚ)", emoji: "2️⃣", s1: "I have two apples.", t1: "Eu tenho duas maçãs.", st1: "(/ai hév tú é-pôls/)", s2: "One, two, buckle my shoe.", t2: "Um, dois, amarre meu sapato.", st2: "(/uán tú bâ-kôl mai shú/)" },
+                { pt: "DO-ZE", en: "Twelve", tr: "(TUÉLV)", emoji: "1️⃣2️⃣", s1: "Twelve months in a year.", t1: "Doze meses em um ano.", st1: "(/tuélv mânths in ê ír/)", s2: "I have twelve pencils.", t2: "Eu tenho doze lápis.", st2: "(/ai hév tuélv pén-sôls/)" },
+                { pt: "DO-MI-NÓ", en: "Domino", tr: "(DÓ-MI-NÔU)", emoji: "🁙", s1: "Let's play dominoes.", t1: "Vamos jogar dominó.", st1: "(/léts plêi dó-mi-nôuz/)", s2: "The domino falls down.", t2: "O dominó cai.", st2: "(/dâ dó-mi-nôu fóls dáun/)" },
+                { pt: "DOU-RA-DO", en: "Golden", tr: "(GÔUL-DÊN)", emoji: "🥇", s1: "The sun is golden.", t1: "O sol é dourado.", st1: "(/dâ sân iz gôul-dên/)", s2: "A golden trophy.", t2: "Um troféu dourado.", st2: "(/ê gôul-dên trô-fi/)" },
+                { pt: "DO-BRA-DU-RA", en: "Origami", tr: "(Ô-RI-GÁ-MI)", emoji: "🦢", s1: "I made a paper origami.", t1: "Eu fiz uma dobradura de papel.", st1: "(/ai mêid ê pêi-pêr ô-ri-gá-mi/)", s2: "Origami is fun.", t2: "Dobradura é divertido.", st2: "(/ô-ri-gá-mi iz fân/)" },
+                { pt: "DO-EN-TE", en: "Sick", tr: "(SÍK)", emoji: "🤒", s1: "I am feeling sick.", t1: "Eu estou me sentindo doente.", st1: "(/ai ém fí-lín sík/)", s2: "Stay in bed if you are sick.", t2: "Fique na cama se estiver doente.", st2: "(/stêi in béd íf iú ar sík/)" },
+                { pt: "DOU-TOR", en: "Doctor", tr: "(DÓK-TÔR)", emoji: "👨‍⚕️", s1: "The doctor is very nice.", t1: "O doutor é muito legal.", st1: "(/dâ dók-tôr iz vé-ri náiss/)", s2: "See the doctor today.", t2: "Veja o doutor hoje.", st2: "(/si dâ dók-tôr tu-dêi/)" },
+                { pt: "DOR-MIR", en: "Sleep", tr: "(SLÍP)", emoji: "😴", s1: "I need to sleep.", t1: "Eu preciso dormir.", st1: "(/ai níd tu slíp/)", s2: "Go to sleep, little one.", t2: "Vá dormir, pequeno.", st2: "(/gou tu slíp lí-tol uán/)" },
+                { pt: "DO-MIN-GO", en: "Sunday", tr: "(SÂN-DÊI)", emoji: "📅", s1: "Sunday is a rest day.", t1: "Domingo é dia de descanso.", st1: "(/sân-dêi iz ê rést dêi/)", s2: "I visit grandma on Sunday.", t2: "Eu visito a vovó no domingo.", st2: "(/ai ví-zit grénd-má on sân-dêi/)" },
+                { pt: "DO-NUT", en: "Donut", tr: "(DÔU-NÂT)", emoji: "🍩", s1: "The donut is sweet.", t1: "O donut é doce.", st1: "(/dâ dôu-nât iz suít/)", s2: "I want a chocolate donut.", t2: "Eu quero um donut de chocolate.", st2: "(/ai uónt ê tchó-kô-lit dôu-nât/)" },
+                { pt: "DOR", en: "Pain", tr: "(PÊIN)", emoji: "🤕", s1: "I have a pain in my head.", t1: "Eu tenho uma dor na cabeça.", st1: "(/ai hév ê pêin in mai héd/)", s2: "The pain will go away.", t2: "A dor vai passar.", st2: "(/dâ pêin uíl gou ê-uêi/)" }
+            ],
+            du: [
+                { pt: "DU-NA", en: "Dune", tr: "(DIÚN)", emoji: "🏜️", s1: "The sand dune is big.", t1: "A duna de areia é grande.", st1: "(/dâ sénd diún iz bíg/)", s2: "Climb the dune.", t2: "Suba a duna.", st2: "(/cláim dâ diún/)" },
+                { pt: "DU-CHA", en: "Shower", tr: "(SHÁU-ÊR)", emoji: "🚿", s1: "Take a cold shower.", t1: "Tome uma ducha gelada.", st1: "(/têik ê kôuld sháu-êr/)", s2: "The shower is broken.", t2: "A ducha está quebrada.", st2: "(/dâ sháu-êr iz brôu-kên/)" },
+                { pt: "DU-EN-DE", en: "Elf", tr: "(ÉLF)", emoji: "🧝", s1: "The elf is small.", t1: "O duende é pequeno.", st1: "(/dâ élf iz smól/)", s2: "Elves help Santa.", t2: "Duendes ajudam o Papai Noel.", st2: "(/élvs hélp sén-tâ/)" },
+                { pt: "DU-REX", en: "Tape", tr: "(TÊIP)", emoji: "📼", s1: "Use tape to fix it.", t1: "Use durex (fita) para consertar.", st1: "(/iuz têip tu fíks it/)", s2: "Where is the tape?", t2: "Onde está o durex?", st2: "(/uér iz dâ têip/)" },
+                { pt: "DÚ-ZIA", en: "Dozen", tr: "(DÂ-ZÊN)", emoji: "🥚", s1: "A dozen eggs.", t1: "Uma dúzia de ovos.", st1: "(/ê dâ-zên égs/)", s2: "I bought a dozen apples.", t2: "Eu comprei uma dúzia de maçãs.", st2: "(/ai bót ê dâ-zên é-pôls/)" },
+                { pt: "DU-QUE", en: "Duke", tr: "(DIÚK)", emoji: "🤴", s1: "The Duke lives here.", t1: "O Duque mora aqui.", st1: "(/dâ diúk lívs hír/)", s2: "He is a noble Duke.", t2: "Ele é um nobre Duque.", st2: "(/hi iz ê nô-bôl diúk/)" },
+                { pt: "DU-E-LO", en: "Duel", tr: "(DIÚ-ÊL)", emoji: "⚔️", s1: "A sword duel.", t1: "Um duelo de espadas.", st1: "(/ê sôrd diú-êl/)", s2: "They are having a duel.", t2: "Eles estão tendo um duelo.", st2: "(/dhêi ar hé-vín ê diú-êl/)" },
+                { pt: "DU-E-TO", en: "Duet", tr: "(DIÚ-ÉT)", emoji: "🎶", s1: "They sing a duet.", t1: "Eles cantam um dueto.", st1: "(/dhêi síng ê diú-ét/)", s2: "A beautiful musical duet.", t2: "Um belo dueto musical.", st2: "(/ê biú-ti-ful miú-zi-kâl diú-ét/)" },
+                { pt: "DU-PLO", en: "Double", tr: "(DÂ-BÔL)", emoji: "♊", s1: "I want a double scoop.", t1: "Eu quero uma bola dupla (sorvete).", st1: "(/ai uónt ê dâ-bôl scúp/)", s2: "Check the double doors.", t2: "Cheque as portas duplas.", st2: "(/tchêk dâ dâ-bôl dôrs/)" },
+                { pt: "DÚ-VI-DA", en: "Doubt", tr: "(DÁUT)", emoji: "❓", s1: "I have a doubt.", t1: "Eu tenho uma dúvida.", st1: "(/ai hév ê dáut/)", s2: "No doubt about it.", t2: "Sem dúvida sobre isso.", st2: "(/nôu dáut ê-báut it/)" },
+                { pt: "DU-RO", en: "Hard", tr: "(HÁRD)", emoji: "🪨", s1: "The rock is hard.", t1: "A pedra é dura.", st1: "(/dâ rók iz hárd/)", s2: "This task is hard.", t2: "Esta tarefa é dura (difícil).", st2: "(/dhis tásk iz hárd/)" },
+                { pt: "DU-AS", en: "Two", tr: "(TÚ)", emoji: "✌️", s1: "Two girls are playing.", t1: "Duas meninas estão brincando.", st1: "(/tú guêrls ar plêi-ín/)", s2: "I have two eyes.", t2: "Eu tenho dois olhos.", st2: "(/ai hév tú áis/)" }
+            ],
+            dao: [
+                { pt: "DE-DÃO", en: "Thumb", tr: "(THÂM)", emoji: "👍", s1: "Thumbs up!", t1: "Dedão para cima!", st1: "(/thâms âp/)", s2: "My thumb is small.", t2: "Meu dedão é pequeno.", st2: "(/mai thâm iz smól/)" },
+                { pt: "AL-GO-DÃO", en: "Cotton", tr: "(KÓ-TÔN)", emoji: "☁️", s1: "Cotton is soft.", t1: "Algodão é macio.", st1: "(/kó-tôn iz sóft/)", s2: "A cotton shirt.", t2: "Uma camisa de algodão.", st2: "(/ê kó-tôn shûrt/)" },
+                { pt: "COR-DÃO", en: "String", tr: "(STRÍN)", emoji: "🧶", s1: "Tie the string.", t1: "Amarre o cordão.", st1: "(/tái dâ strín/)", s2: "A long yellow string.", t2: "Um cordão amarelo longo.", st2: "(/ê lóng ié-lou strín/)" },
+                { pt: "CI-DA-DÃO", en: "Citizen", tr: "(SÍ-TI-ZÊN)", emoji: "🧑", s1: "He is a good citizen.", t1: "Ele é um bom cidadão.", st1: "(/hi iz ê gud sí-ti-zên/)", s2: "Every citizen has rights.", t2: "Todo cidadão tem direitos.", st2: "(/év-ri sí-ti-zên héz ráits/)" },
+                { pt: "PER-DÃO", en: "Forgiveness", tr: "(FÔR-GUÍV-NÊS)", emoji: "🤝", s1: "Forgiveness is important.", t1: "O perdão é importante.", st1: "(/fôr-guív-nês iz im-pór-tânt/)", s2: "Ask for forgiveness.", t2: "Peça perdão.", st2: "(/ásk fôr fôr-guív-nês/)" },
+                { pt: "ES-CU-RI-DÃO", en: "Darkness", tr: "(DÁRK-NÊS)", emoji: "🌑", s1: "I am not afraid of darkness.", t1: "Eu não tenho medo da escuridão.", st1: "(/ai ém nót ê-frêid ôv dárk-nês/)", s2: "The darkness is quiet.", t2: "A escuridão é silenciosa.", st2: "(/dâ dárk-nês iz kuái-êt/)" },
+                { pt: "GRA-TI-DÃO", en: "Gratitude", tr: "(GRÁ-TI-TÚD)", emoji: "🙏", s1: "Show your gratitude.", t1: "Mostre sua gratidão.", st1: "(/shôu iór grá-ti-túd/)", s2: "I feel gratitude.", t2: "Eu sinto gratidão.", st2: "(/ai fíl grá-ti-túd/)" },
+                { pt: "CAL-DEI-RÃO", en: "Cauldron", tr: "(KÓL-DRÔN)", emoji: "🍲", s1: "The witch has a cauldron.", t1: "A bruxa tem um caldeirão.", st1: "(/dâ uítch héz ê kól-drôn/)", s2: "A big black cauldron.", t2: "Um grande caldeirão preto.", st2: "(/ê bíg blék kól-drôn/)" },
+                { pt: "PA-RE-DÃO", en: "Big Wall", tr: "(BÍG UÓL)", emoji: "🧱", s1: "Look at that big wall.", t1: "Olhe para aquele paredão.", st1: "(/luk ét dét bíg uól/)", s2: "The wall is high.", t2: "O paredão é alto.", st2: "(/dâ uól iz hái/)" },
+                { pt: "MAN-DÃO", en: "Bossy", tr: "(BÓ-SSI)", emoji: "😠", s1: "Don't be so bossy.", t1: "Não seja tão mandão.", st1: "(/dount bi sô bó-ssi/)", s2: "He is a bossy boy.", t2: "Ele é um menino mandão.", st2: "(/hi iz ê bó-ssi bói/)" },
+                { pt: "SO-LI-DÃO", en: "Loneliness", tr: "(LÔUN-LI-NÊS)", emoji: "😔", s1: "Loneliness can be sad.", t1: "A solidão pode ser triste.", st1: "(/lôun-li-nês kén bi séd/)", s2: "Avoid loneliness.", t2: "Evite a solidão.", st2: "(/ê-vóid lôun-li-nês/)" },
+                { pt: "BOR-DÃO", en: "Staff", tr: "(STÁF)", emoji: "🦯", s1: "The shepherd has a staff.", t1: "O pastor tem um bordão.", st1: "(/dâ shé-phêrd héz ê stáf/)", s2: "A wooden walking staff.", t2: "Um bordão de madeira.", st2: "(/ê uú-dên uó-kín stáf/)" }
+            ]
+        };
+
+        function renderBlocks() {
+            for (const section in data) {
+                const container = document.getElementById(`grid-${section}`);
+                data[section].forEach(item => {
+                    const syllables = item.pt.split("-");
+                    let sylButtons = syllables.map(s => `<button onclick="speakPT('${s}')" class="syllable-btn">${s}</button>`).join("");
+                    
+                    const card = `
+                        <div class="card-word p-4 flex flex-col items-center gap-4">
+                            <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center text-4xl shadow-inner">${item.emoji}</div>
+                            <div class="w-full text-center flex-1 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex gap-1 mb-3 justify-center flex-wrap">${sylButtons}</div>
+                                    <div class="flex items-center gap-2 mb-3 justify-center">
+                                        <span class="text-xl font-bold text-blue-600 uppercase">${item.en}</span>
+                                        <span class="transcription">${item.tr}</span>
+                                        <button onclick="speakEN('${item.en}')" class="btn-audio">🔊</button>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded-xl border-l-4 border-blue-300 text-left space-y-2 mt-auto">
+                                    <div class="mb-2">
+                                        <span class="text-[11px] font-bold block">1. ${item.s1}</span>
+                                        <span class="translation-text">${item.t1}</span>
+                                        <div class="flex items-center gap-2 mt-1">
+                                            <span class="transcription text-[9px]">${item.st1}</span>
+                                            <button onclick="speakEN('${item.s1}')" class="btn-audio text-[9px] py-0 px-2">🔊</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold block">2. ${item.s2}</span>
+                                        <span class="translation-text">${item.t2}</span>
+                                        <div class="flex items-center gap-2 mt-1">
+                                            <span class="transcription text-[9px]">${item.st2}</span>
+                                            <button onclick="speakEN('${item.s2}')" class="btn-audio text-[9px] py-0 px-2">🔊</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.innerHTML += card;
+                });
+            }
+        }
+
+        function speakPT(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text.toLowerCase());
+                utterance.lang = 'pt-BR';
+                utterance.rate = 0.8; 
+                utterance.pitch = 1.1; 
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function speakEN(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                const voices = window.speechSynthesis.getVoices();
+                let selectedVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) ||
+                                    voices.find(v => v.lang === 'en-US' && v.name.includes('Siri')) ||
+                                    voices.find(v => v.lang.startsWith('en-US')) ||
+                                    voices.find(v => v.lang.startsWith('en'));
+
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                    utterance.lang = selectedVoice.lang;
+                } else {
+                    utterance.lang = 'en-US';
+                }
+                utterance.rate = 0.85;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        window.onload = renderBlocks;
+        window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    </script>
+</body>
+</html>
